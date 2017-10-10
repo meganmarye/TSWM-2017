@@ -1,0 +1,32 @@
+.dropdown							{ margin: 0; padding: 0; }
+ul									{ list-style: none; }
+/*
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; }
+ul.dropdown li                      { float: left; zoom: 1;}
+ul.dropdown a:hover		            { color: #454545; }
+ul.dropdown a:active                { color: inherit; }
+ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #333;
+	 								  color: #454545; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: inherit; color: #242424; position: relative; }
+ul.dropdown li.hover a              { color: black; }
+
+
+/*
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #f5f5f5; color: #454545;
+									  border-bottom: 1px solid #ccc; float: none; }
+
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; }
+
+/*
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }

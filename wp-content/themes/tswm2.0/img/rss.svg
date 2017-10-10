@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5796 625.291 25.417 25.417">
+  <defs>
+    <style>
+      .rss-svg {
+        fill: #746f71;
+      }
+    </style>
+  </defs>
+  <g id="Group_2434" data-name="Group 2434" transform="translate(5776 625.291)">
+    <path id="Path_4841" data-name="Path 4841" class="rss-svg" d="M2.888,34a2.888,2.888,0,0,0,0,5.777,2.888,2.888,0,0,0,0-5.777Z" transform="translate(20 -14.359)"/>
+    <path id="Path_4842" data-name="Path 4842" class="rss-svg" d="M4.578,18A.546.546,0,0,0,4,18.578v3.466a.546.546,0,0,0,.578.578,7.5,7.5,0,0,1,7.51,7.51.546.546,0,0,0,.578.578h3.466a.546.546,0,0,0,.578-.578A12.129,12.129,0,0,0,4.578,18Z" transform="translate(18.311 -7.602)"/>
+    <path id="Path_4843" data-name="Path 4843" class="rss-svg" d="M4.578,0A.546.546,0,0,0,4,.578V5.2a.546.546,0,0,0,.578.578A16.764,16.764,0,0,1,21.33,22.529a.546.546,0,0,0,.578.578h4.621a.546.546,0,0,0,.578-.578A22.558,22.558,0,0,0,4.578,0Z" transform="translate(18.311)"/>
+  </g>
+</svg>

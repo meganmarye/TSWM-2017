@@ -1,0 +1,428 @@
+/*
+	Theme Name: TSWM 2.0
+	Description: VI Marketing and Branding Custom Wordpress Theme - Base of HTML5 Blank WordPress Theme
+	Version: 2.0.0
+	Author: Megan Gessouroun
+	Tags: HTML5, CSS3
+
+	License: MIT
+	License URI: //opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	/* font-size:62.5%; */
+}
+body {
+	color:#444;
+	background-color: #94b63d;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#1673b2;
+	text-decoration:none;
+	font-weight: bold;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+a:hover {
+	color:#454545;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+	background-color: white;
+}
+
+/*------------------------------------*\
+    NAV & BUTTONS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    GRID SYSTEM - CSS TRICKS
+\*------------------------------------*/
+* {
+  @include box-sizing(border-box);
+}
+
+.grid {
+  margin: 0 0 30px 0;
+  overflow: auto;
+  height: auto;
+
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*='col-'] {
+	float: left;
+  padding-right: 40px;
+  .grid &:last-of-type {
+  	padding-right: 0;
+  }
+}
+.fullwidth{
+	width: 100%;
+}
+.col-1-1 {
+	width: 100%;
+}
+.col-2-3 {
+	width: 66.66%;
+}
+.col-1-3 {
+	width: 33.33%;
+}
+.col-1-2 {
+	width: 50%;
+}
+.col-1-4 {
+	width: 25%;
+}
+.col-3-4 {
+	width: 75%;
+}
+.col-1-8 {
+	width: 12.5%;
+}
+
+.module {
+  padding: 40px;
+  background: #eee;
+}
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 0px 0px 0px 40px;
+  [class*='col-']:last-of-type {
+    padding-right: 40px;
+  }
+}
+/*------------------------------------*\
+    GHOST CENTERING - CSS TRICKS
+\*------------------------------------*/
+.block {
+  text-align: center;
+  /* margin: 20px; */
+}
+
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+ }
+
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+}
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+body{
+	font-family: Arial, sans-serif;
+}
+
+h1{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	text-transform: uppercase;
+	margin: 0px;
+}
+h2{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 1.6em;
+	text-transform: uppercase;
+}
+h3{
+	font-family: Arial;
+	font-weight: 400;
+	font-size: 1.1em;
+	line-height: 140%;
+}
+h4{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 1.4em;
+}
+p{
+	font-family: Arial;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 140%;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+/* 1266+ */
+@media only screen and (min-width:1266px) {
+
+}
+/* 1140 - 1266 */
+@media only screen and (max-width:1266px){
+
+}
+/* 1023 - 1140 */
+@media only screen and (max-width:1140px) {
+
+}
+/* 850 - 1023 */
+@media only screen and (max-width:1023px){
+
+}
+
+@media only screen and (max-width:850px){
+
+}
+
+/*------------------------------------*\
+TABLET TARGETING
+/* iPads (portrait and landscape) ----------- */
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1){
+
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+
+}
+
+@media only screen and (max-width:850px){
+
+
+}
+
+
+/*------------------------------------*\
+MOBILE STARTS
+/* 320 - 680 */
+@media only screen and (max-width:680px){
+
+}
+
+/* 1 - 320 */
+@media only screen and (max-width:320px){
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0px;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}

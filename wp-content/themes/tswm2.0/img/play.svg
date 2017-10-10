@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14231.499 1850.463 82.371 84.075">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ee3124;
+        stroke: #ee3124;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="navbar_icon_back" data-name="navbar icon back" class="cls-1" d="M141.346,16.126c4.989-2.6,9.033-.5,9.033,4.706V89.189c0,5.2-4.035,7.31-9.033,4.706L75.751,59.717c-4.989-2.6-5-6.809,0-9.413Z" transform="translate(-14079.121 1947.511) rotate(180)"/>
+</svg>

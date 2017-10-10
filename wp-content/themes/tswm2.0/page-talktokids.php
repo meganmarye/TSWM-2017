@@ -1,0 +1,398 @@
+<?php /* Template Name: Talk to Your Kids */  get_header(); ?>
+
+<?php
+	$args = array(
+		'post_type' => 'background_position',
+	);
+
+	$the_query = new WP_Query( $args );
+
+
+	$post_thumbnail_id = get_post_thumbnail_id();
+	$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+?>
+
+<div class="main-container">
+
+	<div class="static-header-image <?php if ( has_post_thumbnail() ) { echo 'true';} else {echo 'false';} ?>" style="background-image: url(<?php echo $post_thumbnail_url ?>); background-position: <?php the_field('header_background_position'); ?>;"></div>
+	<div class="texture-overlay"></div>
+	<div id="theTarget"></div>
+	<div class="middle-content-container">
+		<div class="grid interior-page-content">
+
+			<div class="left-content">
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="//schema.org/"><?php if(function_exists('bcn_display')){ bcn_display();}?></div>
+				<main role="main">
+					<section>
+						<div class="normal-content" id="talktoyourkidscontanchor">
+							<!-- BODY CONTENT -->
+							<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+								<!-- article -->
+								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+									<?php the_content(); ?>
+
+								</article>
+								<!-- /article -->
+							<?php endwhile; ?>
+							<!-- IF NO CONTENT -->
+							<?php else: ?>
+								<!-- article -->
+								<article>
+									<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+								</article>
+								<!-- /article -->
+							<?php endif; ?>
+
+							<div class="talktoyourkidscont">
+								<div>
+									<p>
+										Click below for age-specific tips to talk to your kids about tobacco.
+									</p>
+								</div>
+									<div class='grid choose-kids testimonials-sys'>
+										<div class="grid-item col-1-3 child" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+												<div class="grid-content">
+													<img src='<?php echo get_template_directory_uri(); ?>/img/22509-01---TSET-17-02-TSWM-Website-Refresh-Elementary.jpg'>
+														<div class="copy">
+															<p>
+																<strong>Ages 5-10</strong><br>
+															</p>
+															<img src="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.svg" data-fallback="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.png" class="rightarrow" alt="Right Arrow"/>
+														</div>
+												</div>
+										</div>
+
+										<div class="grid-item col-1-3 preteen" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+												<div class="grid-content">
+													<img src='<?php echo get_template_directory_uri(); ?>/img/22509-01-TSET-17-02-TSWM-Website-Refresh-MiddleSchool.jpg'>
+														<div class="copy">
+															<p>
+																<strong>Ages 11-14</strong><br>
+															</p>
+															<img src="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.svg" data-fallback="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.png" class="rightarrow" alt="Right Arrow"/>
+														</div>
+												</div>
+										</div>
+
+										<div class="grid-item col-1-3 teen" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+												<div class="grid-content">
+													<img src='<?php echo get_template_directory_uri(); ?>/img/22509-01-TSET-17-02-TSWM-Website-Refresh-HighSchool.jpg'>
+														<div class="copy">
+															<p>
+																<strong>Ages 15-18</strong><br>
+															</p>
+															<img src="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.svg" data-fallback="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.png" class="rightarrow" alt="Right Arrow"/>
+														</div>
+												</div>
+										</div>
+									</div>
+								<div class='grid testimonials-sys results'>
+									<div class="child result" style="display: none;">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/elementaryschool.jpg">
+										<p>
+											<strong>Ages 5-10</strong><br>
+											Though they’re still young, it’s never too early to start talking to your kids about the dangers of tobacco use.
+										</p>
+										<ul>
+											<li>First things first: set a good example. If you use tobacco, think about quitting. Children of parents who smoke are more likely to start smoking at an early age. For free help quitting, call 1-800-QUIT NOW or visit <a href="https://okhelpline.com/">OKhelpline.com</a>.</li>
+											<li>The next time you see someone smoking in public, take a moment to discuss how it harms the body. Tell them that it’s highly addictive and can harm their lungs, heart and other body parts.</li>
+											<li>Be direct: Tell them honestly and directly that you don’t want them using tobacco. Be clear and consistent about the risks.</li>
+											<li>Make it a two-way conversation. Encourage them to share and ask questions.</li>
+										</ul>
+										<p><a href="https://shapeyourfutureok.com/videos-extras/coloring-pages/">Download tobacco-free coloring pages</a></p>
+
+										<div class="button-container viewallkids">
+											<a href="#talktoyourkidscontanchor"><button class="btn btn-1 btn-1b viewallbutton">view all age groups</button></a>
+											<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=<?php the_permalink() ?>" target="_blank" class="button"><button class="btn btn-1 btn-1b">Share with other parents</button></a>
+										</div>
+									</div>
+									<div class="preteen result" style="display: none;">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/middleschool.jpg">
+										<p>
+											<strong>Ages 11-14</strong><br>
+											This is the stage when many kids try tobacco for the first time. Some even become addicted by age 14.
+										</p>
+										<ul>
+											<li>First things first: set a good example. If you use tobacco, think about quitting. Children of parents who smoke are more likely to start smoking at an early age. For free help quitting, call 1-800-QUIT NOW or visit <a href="https://okhelpline.com/">OKhelpline.com</a>.</li>
+											<li>Explain how tobacco can negatively affect their appearance, causing premature wrinkles and yellow teeth.</li>
+											<li>Find out if they have friends that use tobacco. Talk to them about peer pressure and ways to say no. </li>
+											<li>If friends or relatives have died from tobacco-related illness, tell them about it.</li>
+											<li>Have your kid make a pledge to stay away from tobacco.</li>
+										</ul>
+										<div class="button-container viewallkids">
+											<a href="#talktoyourkidscontanchor"><button class="btn btn-1 btn-1b viewallbutton">view all age groups</button></a>
+											<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=<?php the_permalink() ?>" target="_blank" class="button"><button class="btn btn-1 btn-1b">Share with other parents</button></a>
+										</div>
+									</div>
+									<div class="teen result" style="display: none;">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/highschool.jpg">
+										<p>
+											<strong>Ages 15-18</strong><br>
+											The older they get, the more exposed to tobacco they become. Talk to them regularly.
+										</p>
+										<ul>
+											<li>First things first: set a good example. If you use tobacco, think about quitting. Children of parents who smoke are more likely to start smoking at an early age. For free help quitting, call 1-800-QUIT NOW or visit <a href="https://okhelpline.com/">OKhelpline.com</a>.</li>
+											<li>Discuss the number of ways tobacco is harmful to their health. Be specific. You can learn more about tobacco’s health effects <a href="/protecting-oklahoma/health-impact/">here</a>.</li>
+											<li>If you catch your teen using tobacco, avoid threats and ultimatums. Ask a few questions and find out why. Then talk about what can be done to help them stop.</li>
+											<li>Always keep the line of dialogue open. If they ask a question you don’t know the answer to, research it together.</li>
+											<li>Assure them that tobacco use isn’t as common or as cool as they might think. In fact, most adults and kids don’t smoke, vape or use tobacco products.</li>
+											<li>Speak candidly about the issues you’ve faced, describing the physical, financial and social impacts it can have.</li>
+											<li>Tell them how the tobacco industry <a href="/exposing-big-tobacco/targeting-our-children/">markets their products to kids</a> and empower them to resist.</li>
+										</ul>
+
+
+										<div class="button-container viewallkids">
+											<a href="#talktoyourkidscontanchor"><button class="btn btn-1 btn-1b viewallbutton">view all age groups</button></a>
+											<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=<?php the_permalink() ?>" target="_blank" class="button"><button class="btn btn-1 btn-1b">Share with other parents</button></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="clearfix"></div>
+						<div class="acf-content">
+
+							<?php
+
+							$postURL = get_permalink($postobject->ID);
+
+							// check if the flexible content field has rows of data
+							if( have_rows('interior_content') ):
+
+							    // loop through the rows of data
+							    while ( have_rows('interior_content') ) : the_row();
+
+							        //DID YOU KNOW
+							        if( get_row_layout() == 'did_you_know' ):
+
+							        	$post_object = get_sub_field('dyk_post');
+
+					                   if( $post_object ):
+
+					                        $post = $post_object; setup_postdata( $post );
+					                        $image = get_field('image');
+					                        ?>
+
+
+											<div class="didyouknow-content">
+												<div class="dyk-img">
+													<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+													<div class="dky">DID YOU KNOW</div>
+												</div>
+												<div class="dky-text">
+													<div class="copy"><?php the_field('copy_to_share'); ?></div>
+													<div class="dky-share">
+														<span>SHARE</span>
+														<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=<?php the_permalink() ?>" target="_blank" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+														<a href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode(get_field('copy_to_share')); ?>%20@StopsWithMe" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+														<a href="https://pinterest.com/pin/create/button/?url=<?php echo $postURL ?>&media=<?php echo $image['url']; ?>&description=DID%20YOU%20KNOW: <?php echo rawurlencode(get_field('copy_to_share')); ?>%20Find out more at%3A%20<?php echo $postURL ?>" data-pin-do="buttonPin" data-pin-custom="true" target="_blank" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+														<a href="mailto:?&subject=DID YOU KNOW%20%7C%20Tobacco%20Stops%20With%20Me&body=<?php echo rawurlencode(get_field('copy_to_share')); ?>%20Find out more at%3A%20<?php echo $postURL ?>" class="email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+													</div>
+												</div>
+											</div>
+
+											<? wp_reset_postdata();
+
+					                    endif;
+
+
+							        endif;
+							        //DID YOU KNOW
+
+									//WYSIWYG
+							        if( get_row_layout() == 'wysiwyg-block' ):
+
+							        	$wysiwyg = get_sub_field('wysiwyg');
+
+							        	echo '<div class="wysiwyg-content">' . $wysiwyg . '</div>';
+
+						        	endif;
+									//WYSIWYG
+
+									//INFOGRAPHIC
+							        if( get_row_layout() == 'infographic_block_1' ):
+
+							        	// check if the nested repeater field has rows of data
+							        	if( have_rows('repeater_test') ):
+
+										 	echo '<div class="infographic-container">';
+
+										 	// loop through the rows of data
+										    while ( have_rows('repeater_test') ) : the_row();
+
+												$infoimg = get_sub_field('repeater_image');
+									        	$sharecopy = get_sub_field('repeater_share_copy');
+									        	$twitterurl= get_sub_field('repeater_twitter_image_url');
+									        	$infocopy = get_sub_field('repeater_copy_within_infographic');
+												// vars
+												$field = get_sub_field_object('color_scheme');
+												$value = $field['value'];
+												$label = $field['choices'][ $value ];
+
+												echo '
+												<div class="single-infographic ' . $value . '">
+													<img src="' . $infoimg . '" alt="' . $infocopy . '"/>
+													<div class="page-share-infographic">
+														<span>SHARE</span>
+														<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=' . $postURL . '" target="_blank" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+														<a href="https://twitter.com/intent/tweet?text=' . $infocopy . '%20@StopsWithMe.%20pic.twitter.com/' . $twitterurl . '" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+														<a href="https://pinterest.com/pin/create/button/?url=' . $postURL . '&media=' . $infoimg . '&description=' . $sharecopy . 'Find out more at ' . $postURL . '" data-pin-do="buttonPin" data-pin-custom="true" target="_blank" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+														<a href="mailto:?&subject=' . $sharecopy . '%20%7C%20Tobacco%20Stops%20With%20Me&body=' . $infocopy . '%20Find%20out%20more%20at%3A%20' . $postURL . '" class="email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+													</div>
+												</div>
+												';
+
+											endwhile;
+
+											echo '</div>';
+
+										endif;
+
+							        endif;
+							        //INFOGRAPHIC
+
+							        //INFOGRAPHIC 2
+							        if( get_row_layout() == 'infographic_v3' ):
+
+							        	// check if the nested repeater field has rows of data
+							        	if( have_rows('infographic_single_v3') ):
+
+										 	echo '<div class="infographic-container">';
+
+										 	// loop through the rows of data
+										    while ( have_rows('infographic_single_v3') ) : the_row();
+
+							                   $post_object = get_sub_field('infographic_post_object');
+
+							                   if( $post_object ):
+
+							                        $post = $post_object; setup_postdata( $post ); ?>
+
+													<div class="single-infographic <?php the_field('color_scheme')['value']?>">
+														<img src="<?php the_field('image')?>" alt="<?php the_field('copy_within_infographic')?>"/>
+														<div class="page-share-infographic">
+															<span>SHARE</span>
+															<a href="https://www.facebook.com/dialog/share?app_id=1892042061079137&amp;display=popup&amp;href=<?php the_permalink() ?>" target="_blank" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+															<a href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode(get_field('copy_within_infographic')); ?>%20@StopsWithMe.%20pic.twitter.com/<?php the_field('twitter_image_url') ?>" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+															<a href="https://pinterest.com/pin/create/button/?url=<?php echo $postURL ?>&media=<?php the_field('image')?>&descriptions=<?php the_field('share_copy')?>Find out more at <?php echo $postURL ?>" data-pin-do="buttonPin" data-pin-custom="true" target="_blank" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+															<a href="mailto:?&subject=<?php the_field('share_copy')?>%20%7C%20Tobacco%20Stops%20With%20Me&body=<?php  echo rawurlencode(get_field('copy_within_infographic')); ?>%20Find%20out%20more%20at%3A%20<?php echo $postURL ?>" class="email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+														</div>
+													</div>
+
+													<? wp_reset_postdata();
+
+							                    endif;
+
+											endwhile;
+
+											echo '</div>';
+
+										endif;
+
+							        endif;
+							        //INFOGRAPHIC 2
+
+
+
+							    endwhile;
+								else :
+							    // no layouts found
+							endif;
+							?>
+						</div>
+						<div class="clearfix"></div>
+
+
+						<div class="left-share">
+							<span>SHARE</span>
+							<a href="https://www.facebook.com/dialog/share?app_id=165808663777969&amp;display=popup&amp;href=<?php the_permalink(); ?>" target="_blank" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+							<a href="//twitter.com/share?text=<?php the_title('', ' %7C Tobacco Stops With Me Oklahoma'); ?>&amp;url=<?php echo wp_get_shortlink(); ?>&amp;hashtags=" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true" class="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+							<a href="mailto:?&subject=<?php the_title('', ' %7C Tobacco Stops With Me Oklahoma'); ?>&body=Check%20out%3A%20<?php the_permalink(); ?>" class="email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+						</div>
+						<div class="related-content <?php if( have_rows('grid_item_related') ) { echo 'true-related';} else {echo 'false-related';} ?>">
+							<span>recommended PAGES</span>
+							<?php
+
+							// check if the flexible content field has rows of data
+							if( have_rows('grid_item_related') ):
+
+							     // loop through the rows of data
+							    while ( have_rows('grid_item_related') ) : the_row();
+
+							        if( get_row_layout() == 'grid_item_single' ):
+
+							        	$title = get_sub_field('title');
+							        	$number = get_sub_field('number');
+							        	$description = get_sub_field('description');
+							        	$page_link = get_sub_field('page_link');
+							        	$image = get_sub_field('image');
+
+
+							        endif;
+
+							?>
+
+							<div class="grid-item">
+								<a href="<?php echo($page_link) ?>">
+									<div class="grid-content">
+										<img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="image" />
+										<div class="copy">
+											<h3><?php echo($title) ?></h3>
+											<?php echo($description) ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.svg" data-fallback="<?php echo get_template_directory_uri(); ?>/img/Right-Arrow.png" class="rightarrow" alt="Right Arrow"/>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<?php endwhile;
+							else :
+							    // no layouts found
+							endif;
+							?>
+						</div>
+					</section>
+				</main>
+			</div>
+			<div class="right-content sidebar-interior-page">
+				<?php the_field('sidebar_menu_select') ?>
+				<div class="sidebar-section <?php if( have_rows('take_action') ) { echo 'true-action';} else {echo 'false-action';} ?>">
+					<div class="take-action-container">
+						<?php
+						if( have_rows('take_action') ):
+
+						    // loop through the rows of data
+						    while ( have_rows('take_action') ) : the_row();
+
+						        if( get_row_layout() == 'take_action_item' ):
+
+						        	$headline = get_sub_field('headline');
+						        	$content = get_sub_field('content_ta');
+
+						        endif;
+						?>
+						<div class="action-item">
+							<span class="headline"><?php echo($headline) ?></span>
+							<?php echo($content) ?>
+						</div>
+
+
+						<?php endwhile;
+						else :
+						    // no layouts found
+						endif;
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<?php get_footer(); ?>

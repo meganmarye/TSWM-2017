@@ -1,0 +1,87 @@
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:34px;
+	line-height:44px;
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-weight:600;
+	font-size:22px;
+	line-height:32px;
+}
+
+h3 {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:20px;
+	line-height:30px;
+}
+h1 a, h2 a, h3 a, a h1, a h2, a h3{
+	color: inherit;
+	color: #EE3124;
+	text-decoration: none;
+}
+p, li{
+	font-family: 'Oswald', sans-serif;
+	font-weight:400;
+	font-size:18px;
+	line-height:28px;
+}
+.one, .one p, .one li{
+	font-family: 'Oswald', sans-serif;
+	font-weight:400;
+	font-size:18px;
+	line-height:28px;
+}
+
+.one strong, .one p strong, .one li strong {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+}
+
+.two, .two p, .two li{
+	font-family: 'Oswald', sans-serif;
+	font-weight:400;
+	font-size:16px;
+	line-height:24px;
+}
+
+.two strong, .two p strong, .two li strong {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+}
+
+.three, .three p, .three li {
+	font-family: 'Oswald', sans-serif;
+	font-weight:400;
+	font-size:14px;
+	line-height:22px;
+}
+p a{
+	font-weight: 600;
+	color: #EE3124;
+	text-decoration: none;
+}
+.pdf a:before{
+	display: inline-block;
+	content: ' ';
+	background-image: url('img/PDF.svg');
+	background-size: 16px 16px;
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+p .button a, a .button{
+		display: inline-block;
+		color: #FF6A52;
+		padding: 8px 20px 6px 20px;
+		border: 2px solid #FF6A52;
+		text-transform: uppercase;
+}
+p .button a:hover, a .button:hover{
+	color: white;
+	background-color: #FF6A52;
+}
